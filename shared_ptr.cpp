@@ -41,10 +41,8 @@ public:
 	}
 	~Shared_ptr()
 	{
-		if (m_ptr == nullptr)
-			return;
 		--(*m_counter);
-		if (m_counter->GetCounter == 0)
+		if (m_counter->GetCounter() == 0)
 		{
 			delete m_counter;
 			delete m_ptr;
