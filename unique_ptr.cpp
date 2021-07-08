@@ -9,10 +9,7 @@ public:
 		if (m_ptr != nullptr)
 			delete m_ptr; 
 	}
-	unique_ptr(const unique_ptr& p) 
-	{
-		this->m_ptr = p.m_ptr;
-	}
+	unique_ptr(const unique_ptr& p) = delete;
 	unique_ptr(const unique_ptr&& p)
 	{
 		this->m_ptr = p.m_ptr;
